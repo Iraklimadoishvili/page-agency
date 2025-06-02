@@ -1,0 +1,12 @@
+<section class="why-fail-section py-5 bg-light" id="why-fail">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Why Most Small Business Sites Fail</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-12 col-md-4 text-center" *ngFor="let pain of painPoints">
+        <div class="why-icon mb-3"><i [class]="pain.icon"></i></div>
+        <h5 class="fw-semibold mb-2">{{ pain.title }}</h5>
+        <p class="text-muted">{{ pain.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+<section class="problems-section py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Why Most Small Business Websites Struggle</h2>
+    <div class="row g-4 align-items-stretch">
+      <div class="col-12 col-md-6">
+        <div class="card h-100 p-4 text-center border-0 shadow-sm">
+          <i class="bi bi-hourglass-split display-5 text-primary mb-3"></i>
+          <h5 class="fw-bold mb-2">Slow Loading</h5>
+          <p class="text-muted">People leave if your site takes too long to load. Slow sites lose sales and trust.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="card h-100 p-4 text-center border-0 shadow-sm">
+          <i class="bi bi-phone display-5 text-primary mb-3"></i>
+          <h5 class="fw-bold mb-2">Bad Mobile Experience</h5>
+          <p class="text-muted">Most visitors use their phones. If your site isn’t mobile-friendly, you’re missing out.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="card h-100 p-4 text-center border-0 shadow-sm mt-4 mt-md-0">
+          <i class="bi bi-palette display-5 text-primary mb-3"></i>
+          <h5 class="fw-bold mb-2">Outdated Design</h5>
+          <p class="text-muted">Old, cluttered designs make your business look untrustworthy and out of touch.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services-section py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">How We Help</h2>
+    <div class="row g-4">
+      <div class="col-12 col-md-6" *ngFor="let service of services">
+        <div class="card service-card h-100 shadow-sm text-center p-4">
+          <div class="mb-3">
+            <i [class]="service.icon + ' service-icon'" aria-hidden="true"></i>
+          </div>
+          <h5 class="card-title fw-bold mb-2">{{ service.name }}</h5>
+          <p class="card-text mb-3">{{ service.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="not-sure-section py-5 bg-white text-center">
+  <div class="container">
+    <h3 class="fw-bold mb-3">Not Sure What You Need?</h3>
+    <p class="mb-4 text-muted">No worries! We’ll review your site and show you exactly where you can improve—no tech talk, no pressure.</p>
+    <a routerLink="/contact" class="btn btn-primary btn-lg">Request Free Demo Audit</a>
+  </div>
+</section>

@@ -1,0 +1,57 @@
+<div class="contact-page container py-5" id="contact">
+  <h2 class="text-center fw-bold mb-3">Let’s talk.</h2>
+  <p class="text-center text-muted mb-4">Tell us about your business, and we’ll get back in 24 hours.</p>
+  <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
+    <div class="row g-3 mb-3">
+      <div class="col-md-6">
+        <label for="name" class="form-label">Name</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-person"></i></span>
+          <input type="text" class="form-control" id="name" name="name" ngModel required>
+        </div>
+        <div class="invalid-feedback">Name is required.</div>
+      </div>
+      <div class="col-md-6">
+        <label for="business" class="form-label">Business Name</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-briefcase"></i></span>
+          <input type="text" class="form-control" id="business" name="business" ngModel required>
+        </div>
+        <div class="invalid-feedback">Business name is required.</div>
+      </div>
+      <div class="col-md-6">
+        <label for="website" class="form-label">Website <span class="text-muted small">(optional)</span></label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-globe"></i></span>
+          <input type="url" class="form-control" id="website" name="website" ngModel>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+          <input type="email" class="form-control" id="email" name="email" ngModel required email>
+        </div>
+        <div class="invalid-feedback">Valid email is required.</div>
+      </div>
+      <div class="col-12">
+        <label for="message" class="form-label">Message</label>
+        <div class="input-group">
+          <span class="input-group-text"><i class="bi bi-chat-dots"></i></span>
+          <textarea class="form-control" id="message" name="message" rows="4" ngModel required></textarea>
+        </div>
+        <div class="invalid-feedback">Message is required.</div>
+      </div>
+    </div>
+    <div class="text-center mt-4 mb-3">
+      <button type="submit" class="btn btn-primary btn-lg px-5" [disabled]="contactForm.invalid">Request Free Audit</button>
+    </div>
+    <div *ngIf="submitted" class="alert alert-success mt-4" role="alert">
+      Thank you! Your message has been sent.
+    </div>
+  </form>
+  <div class="text-center mt-4">
+    <div class="mb-2 text-muted">Or email us directly at <a href="mailto:youragency&#64;email.com" class="fw-semibold">youragency&#64;email.com</a></div>
+    <div class="fw-bold mt-3">Let’s Build Something Great</div>
+  </div>
+</div>

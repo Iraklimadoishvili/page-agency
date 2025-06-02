@@ -1,0 +1,21 @@
+.testimonials-section {
+  background: #f8f9fa;
+}
+
+.testimonial-card {
+  background: #fff;
+  border: none;
+  border-radius: 1rem;
+  transition: box-shadow 0.2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+
+.blockquote-footer {
+  margin-top: 1rem;
+}
+
+@media (max-width: 767.98px) {
+  .testimonial-card {
+    margin-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,34 @@
+<!-- Soothing, modern navbar design -->
+<nav class="navbar navbar-expand-lg navbar-blur sticky-top py-2 shadow-sm">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2 fw-bold" routerLink="/">
+      <img src="assets/logo.png" alt="Logo" width="36" height="36" class="rounded-circle shadow-sm bg-white p-1 border" *ngIf="logoExists">
+      <span class="brand-text">Page Agency</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav gap-lg-2 mb-2 mb-lg-0 align-items-lg-center">
+        <li class="nav-item">
+          <a class="nav-link px-3 rounded-pill" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 rounded-pill" routerLink="/services" routerLinkActive="active">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 rounded-pill" routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 rounded-pill" routerLink="/pricing" routerLinkActive="active">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 rounded-pill" routerLink="/faq" routerLinkActive="active">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3 rounded-pill" routerLink="/contact" routerLinkActive="active">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

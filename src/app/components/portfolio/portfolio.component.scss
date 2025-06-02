@@ -1,0 +1,16 @@
+.project-card {
+  transition: transform 0.2s cubic-bezier(.4,2,.6,1);
+  &:hover {
+    transform: scale(1.04);
+    z-index: 2;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+  }
+}
+.card-caption {
+  color: #6c757d;
+}
+@media (max-width: 767.98px) {
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+}

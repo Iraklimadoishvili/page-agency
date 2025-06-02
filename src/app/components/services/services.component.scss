@@ -1,0 +1,37 @@
+.problems-section .card {
+  border-radius: 1.25rem;
+  border: none;
+  background: #f4f8fb;
+  box-shadow: 0 2px 12px rgba(60, 60, 120, 0.04);
+}
+
+.services-section .card {
+  border-radius: 1.25rem;
+  border: 2px solid #e9ecef;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  &:hover {
+    border-color: #0d6efd;
+    box-shadow: 0 8px 32px rgba(13,110,253,0.08);
+  }
+}
+.service-icon {
+  font-size: 2.5rem;
+  color: #0d6efd;
+  margin-bottom: 0.5rem;
+}
+.not-sure-section {
+  background: #f8fafc;
+  border-radius: 1.25rem;
+  margin-top: 2rem;
+}
+@media (max-width: 767.98px) {
+  .service-card {
+    margin-bottom: 1.5rem;
+  }
+}
+@media (max-width: 991.98px) {
+  .row.g-4 > [class^='col-'] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

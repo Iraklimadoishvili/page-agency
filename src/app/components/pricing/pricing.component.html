@@ -1,0 +1,101 @@
+<section class="pricing-section py-5" id="pricing">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4">Pricing</h2>
+    <div class="row g-4 justify-content-center">
+      <div class="col-12 col-md-4" *ngFor="let tier of pricingTiers">
+        <div class="card pricing-card h-100 text-center p-4">
+          <div class="mb-3">
+            <i [class]="tier.icon + ' pricing-icon'" aria-hidden="true"></i>
+          </div>
+          <h5 class="fw-bold mb-2">{{ tier.name }}</h5>
+          <div class="fs-3 fw-bold text-primary mb-2">{{ tier.price }}</div>
+          <p class="text-muted mb-3">{{ tier.description }}</p>
+          <ul class="list-unstyled mb-4">
+            <li *ngFor="let feature of tier.features" class="mb-2">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>{{ feature }}
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-primary w-100">Get Started Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compare Plans Table -->
+<section class="compare-section py-4">
+  <div class="container">
+    <h3 class="text-center fw-bold mb-3">Compare Plans</h3>
+    <div class="table-responsive">
+      <table class="table compare-table align-middle text-center">
+        <thead>
+          <tr>
+            <th class="feature-label">Features</th>
+            <th>Starter</th>
+            <th>Growth</th>
+            <th>Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of compareTable">
+            <td class="feature-label text-start">{{ row.label }}</td>
+            <td>
+              <ng-container *ngIf="row.starter === true">
+                <i class="bi bi-check-circle-fill plan-yes"></i>
+              </ng-container>
+              <ng-container *ngIf="row.starter === false">
+                <i class="bi bi-x-circle plan-no"></i>
+              </ng-container>
+              <ng-container *ngIf="row.starter !== true && row.starter !== false">
+                <span class="plan-detail">{{ row.starter }}</span>
+              </ng-container>
+            </td>
+            <td>
+              <ng-container *ngIf="row.growth === true">
+                <i class="bi bi-check-circle-fill plan-yes"></i>
+              </ng-container>
+              <ng-container *ngIf="row.growth === false">
+                <i class="bi bi-x-circle plan-no"></i>
+              </ng-container>
+              <ng-container *ngIf="row.growth !== true && row.growth !== false">
+                <span class="plan-detail">{{ row.growth }}</span>
+              </ng-container>
+            </td>
+            <td>
+              <ng-container *ngIf="row.pro === true">
+                <i class="bi bi-check-circle-fill plan-yes"></i>
+              </ng-container>
+              <ng-container *ngIf="row.pro === false">
+                <i class="bi bi-x-circle plan-no"></i>
+              </ng-container>
+              <ng-container *ngIf="row.pro !== true && row.pro !== false">
+                <span class="plan-detail">{{ row.pro }}</span>
+              </ng-container>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="faq-section py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center fw-bold mb-4">Frequently Asked Questions</h3>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item" *ngFor="let item of faqs; let i = index">
+        <h2 class="accordion-header" [id]="'heading' + i">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i" aria-expanded="false" [attr.aria-controls]="'collapse' + i">
+            {{ item.question }}
+          </button>
+        </h2>
+        <div [id]="'collapse' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading' + i" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            {{ item.answer }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
