@@ -15,7 +15,11 @@
               <i class="bi bi-check-circle-fill text-success me-2"></i>{{ feature }}
             </li>
           </ul>
-          <a href="#contact" class="btn btn-primary w-100">Get Started Now</a>
+          <a 
+            routerLink="/contact" 
+            [queryParams]="{ plan: tier.name }" 
+            class="btn btn-primary w-100"
+          >Get Started Now</a>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-contact-form',
@@ -11,6 +12,15 @@ import { FormsModule } from '@angular/forms';
 })
 export class ContactFormComponent {
   submitted = false;
+  selectedPlan = '';
+
+  constructor(private route: ActivatedRoute) {}
+
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      this.selectedPlan = params['plan'] || '';
+    });
+  }
 
   onSubmit(form: any) {
     this.submitted = true;

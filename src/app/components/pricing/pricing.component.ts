@@ -1,10 +1,11 @@
 import { CommonModule, NgFor } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-pricing',
   standalone: true,
-  imports: [NgFor,CommonModule],
+  imports: [NgFor, CommonModule, RouterModule],
   templateUrl: './pricing.component.html',
   styleUrl: './pricing.component.scss'
 })
@@ -62,20 +63,28 @@ export class PricingComponent {
 
   faqs = [
     {
+      question: 'What happens after I click Get Started?',
+      answer: 'You’ll be taken to a short contact form. Once we get your info, we’ll review your business and send you a custom response within 24 hours. No payment is needed upfront.'
+    },
+    {
+      question: 'What if I already have a website?',
+      answer: 'Great! We’ll audit your current website and suggest ways to improve it. If it works well, we’ll just upgrade parts of it — no need to start from scratch.'
+    },
+    {
       question: 'Can I cancel anytime?',
-      answer: 'Yes! There are no contracts. Cancel whenever you like.'
+      answer: 'Yes. Our subscriptions are month-to-month. Cancel anytime, no questions asked.'
     },
     {
-      question: 'What if I’m not happy?',
-      answer: 'We’ll work with you until you’re satisfied, or you get your money back.'
+      question: 'What if I don’t know which plan to choose?',
+      answer: 'No worries. Just send us your website link, and we’ll recommend the best plan for your needs — free.'
     },
     {
-      question: 'Is there a setup fee?',
-      answer: 'Nope! Your monthly price is all you pay.'
+      question: 'How long does it take to redesign a website?',
+      answer: 'Most websites take 5–7 days to complete, depending on your content and goals.'
     },
     {
-      question: 'How do I get started?',
-      answer: 'Just click “Get Started Now” and we’ll guide you through the next steps.'
+      question: 'Can I talk to someone before choosing a plan?',
+      answer: 'Yes! Just go to the Contact page and let us know — we’ll reply quickly and can even schedule a free call.'
     }
   ];
 }
