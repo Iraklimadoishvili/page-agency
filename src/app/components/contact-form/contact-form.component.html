@@ -1,6 +1,6 @@
 <div class="contact-page container py-5" id="contact">
-  <h2 class="text-center fw-bold mb-3">Let’s talk.</h2>
-  <p class="text-center text-muted mb-4">Tell us about your business, and we’ll get back in 24 hours.</p>
+  <h2 class="text-center fw-bold mb-3">Want a free, no-pressure website audit?</h2>
+  <p class="text-center text-muted mb-4">Just send us your site link — we’ll review it and tell you exactly what’s holding it back.</p>
   <form #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)" novalidate>
     <div class="row g-3 mb-3">
       <div class="col-md-6">
@@ -47,7 +47,7 @@
       <button type="submit" class="btn btn-primary btn-lg px-5" [disabled]="contactForm.invalid">Request Free Audit</button>
     </div>
     <div *ngIf="submitted" class="alert alert-success mt-4" role="alert">
-      Thank you! Your message has been sent.
+      Thanks! We’ll respond within 24 hours.
     </div>
   </form>
   <div class="text-center mt-4">
