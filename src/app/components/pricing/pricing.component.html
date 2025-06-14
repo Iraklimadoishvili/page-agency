@@ -1,105 +1,147 @@
 <section class="pricing-section py-5" id="pricing">
   <div class="container">
-    <h2 class="text-center fw-bold mb-4">Pricing</h2>
+    <h2 class="text-center fw-bold mb-4">AI Automation Plans</h2>
     <div class="row g-4 justify-content-center">
-      <div class="col-12 col-md-4" *ngFor="let tier of pricingTiers">
-        <div class="card pricing-card h-100 text-center p-4">
-          <div class="mb-3">
-            <i [class]="tier.icon + ' pricing-icon'" aria-hidden="true"></i>
-          </div>
-          <h5 class="fw-bold mb-2">{{ tier.name }}</h5>
-          <div class="fs-3 fw-bold text-primary mb-2">{{ tier.price }}</div>
-          <p class="text-muted mb-3">{{ tier.description }}</p>
-          <ul class="list-unstyled mb-4">
-            <li *ngFor="let feature of tier.features" class="mb-2">
-              <i class="bi bi-check-circle-fill text-success me-2"></i>{{ feature }}
-            </li>
+      <!-- Starter Plan -->
+      <div class="col-12 col-md-4">
+        <div class="card pricing-card h-100 text-center p-4 border-0 shadow-sm">
+          <div class="mb-3" style="font-size:2.5rem;">🟢</div>
+          <h5 class="fw-bold mb-2">Starter <span class="text-muted fs-6">– $199/month</span></h5>
+          <div class="text-muted mb-3">Perfect for solo founders and small shops.</div>
+          <ul class="list-unstyled mb-3 text-start mx-auto" style="max-width: 320px;">
+            <li class="mb-2"><i class="bi bi-robot me-2 text-primary"></i>1 AI chatbot (FAQ-trained, installed on site)</li>
+            <li class="mb-2"><i class="bi bi-arrow-repeat me-2 text-primary"></i>1 automated workflow (e.g., email reply or Google Sheets update)</li>
+            <li class="mb-2"><i class="bi bi-bar-chart-line me-2 text-primary"></i>Monthly usage & performance report</li>
+            <li class="mb-2"><i class="bi bi-envelope me-2 text-primary"></i>Email support</li>
           </ul>
-          <a 
-            routerLink="/contact" 
-            [queryParams]="{ plan: tier.name }" 
-            class="btn btn-primary w-100"
-          >Get Started Now</a>
+          <a routerLink="/contact" [queryParams]="{ plan: 'Starter' }" class="btn btn-primary w-100 mb-2">Get Started</a>
+          <div class="small text-muted">No setup fees. Cancel anytime.</div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- Compare Plans Table -->
-<section class="compare-section py-4">
-  <div class="container">
-    <h3 class="text-center fw-bold mb-3">Compare Plans</h3>
-    <div class="table-responsive">
-      <table class="table compare-table align-middle text-center">
-        <thead>
-          <tr>
-            <th class="feature-label">Features</th>
-            <th>Starter</th>
-            <th>Growth</th>
-            <th>Pro</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let row of compareTable">
-            <td class="feature-label text-start">{{ row.label }}</td>
-            <td>
-              <ng-container *ngIf="row.starter === true">
-                <i class="bi bi-check-circle-fill plan-yes"></i>
-              </ng-container>
-              <ng-container *ngIf="row.starter === false">
-                <i class="bi bi-x-circle plan-no"></i>
-              </ng-container>
-              <ng-container *ngIf="row.starter !== true && row.starter !== false">
-                <span class="plan-detail">{{ row.starter }}</span>
-              </ng-container>
-            </td>
-            <td>
-              <ng-container *ngIf="row.growth === true">
-                <i class="bi bi-check-circle-fill plan-yes"></i>
-              </ng-container>
-              <ng-container *ngIf="row.growth === false">
-                <i class="bi bi-x-circle plan-no"></i>
-              </ng-container>
-              <ng-container *ngIf="row.growth !== true && row.growth !== false">
-                <span class="plan-detail">{{ row.growth }}</span>
-              </ng-container>
-            </td>
-            <td>
-              <ng-container *ngIf="row.pro === true">
-                <i class="bi bi-check-circle-fill plan-yes"></i>
-              </ng-container>
-              <ng-container *ngIf="row.pro === false">
-                <i class="bi bi-x-circle plan-no"></i>
-              </ng-container>
-              <ng-container *ngIf="row.pro !== true && row.pro !== false">
-                <span class="plan-detail">{{ row.pro }}</span>
-              </ng-container>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <!-- Growth Plan -->
+      <div class="col-12 col-md-4">
+        <div class="card pricing-card h-100 text-center p-4 border-primary border-2 shadow-sm">
+          <div class="mb-3" style="font-size:2.5rem;">🔵</div>
+          <h5 class="fw-bold mb-2">Growth <span class="text-muted fs-6">– $399/month</span> <span class="badge bg-primary ms-2">Most Popular</span></h5>
+          <div class="text-muted mb-3">For growing businesses ready to automate more.</div>
+          <ul class="list-unstyled mb-3 text-start mx-auto" style="max-width: 320px;">
+            <li class="mb-2"><i class="bi bi-robot me-2 text-primary"></i>Everything in Starter</li>
+            <li class="mb-2"><i class="bi bi-pencil-square me-2 text-primary"></i>AI social media post generator (3–5 posts/week)</li>
+            <li class="mb-2"><i class="bi bi-arrow-repeat me-2 text-primary"></i>Up to 3 automated workflows (bookings, review summaries, reports)</li>
+            <li class="mb-2"><i class="bi bi-chat-dots me-2 text-primary"></i>Priority email + chat support</li>
+          </ul>
+          <a routerLink="/contact" [queryParams]="{ plan: 'Growth' }" class="btn btn-primary w-100 mb-2">Get Started</a>
+          <div class="small text-muted">No setup fees. Cancel anytime.</div>
+        </div>
+      </div>
+      <!-- Pro Plan -->
+      <div class="col-12 col-md-4">
+        <div class="card pricing-card h-100 text-center p-4 border-0 shadow-sm">
+          <div class="mb-3" style="font-size:2.5rem;">🟣</div>
+          <h5 class="fw-bold mb-2">Pro <span class="text-muted fs-6">– $799/month</span></h5>
+          <div class="text-muted mb-3">For serious automation and scale.</div>
+          <ul class="list-unstyled mb-3 text-start mx-auto" style="max-width: 320px;">
+            <li class="mb-2"><i class="bi bi-robot me-2 text-primary"></i>Everything in Growth</li>
+            <li class="mb-2"><i class="bi bi-infinity me-2 text-primary"></i>Unlimited AI workflows</li>
+            <li class="mb-2"><i class="bi bi-kanban me-2 text-primary"></i>Custom dashboards (Notion or Google Sheets)</li>
+            <li class="mb-2"><i class="bi bi-slack me-2 text-primary"></i>Slack support + real-time updates</li>
+            <li class="mb-2"><i class="bi bi-graph-up-arrow me-2 text-primary"></i>Monthly AI audit + performance consulting</li>
+          </ul>
+          <a routerLink="/contact" [queryParams]="{ plan: 'Pro' }" class="btn btn-primary w-100 mb-2">Get Started</a>
+          <div class="small text-muted">No setup fees. Cancel anytime.</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FAQ Section -->
 <section class="faq-section py-5 bg-light">
-  <div class="container">
-    <h3 class="text-center fw-bold mb-4">Frequently Asked Questions</h3>
-    <div class="accordion" id="faqAccordion">
-      <div class="accordion-item" *ngFor="let item of faqs; let i = index">
-        <h2 class="accordion-header" [id]="'heading' + i">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i" aria-expanded="false" [attr.aria-controls]="'collapse' + i">
-            {{ item.question }}
-          </button>
-        </h2>
-        <div [id]="'collapse' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading' + i" data-bs-parent="#faqAccordion">
-          <div class="accordion-body">
-            {{ item.answer }}
-          </div>
+<div class="container my-5">
+  <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+
+  <div class="accordion" id="faqAccordion">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+          What if I already use tools like Gmail or Calendly?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          No problem. We integrate our automation into whatever tools you're already using — Gmail, Google Sheets, Notion, Calendly, and more.
         </div>
       </div>
     </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+          Can I upgrade or downgrade plans?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes, you can switch between plans at any time. Changes apply next billing cycle — no penalties.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+          Is this plug-and-play?
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes! We set everything up, train your chatbot, and connect all tools. You don’t need to do anything — we handle it all.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFour">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+          Do I need to understand AI or tech to use this?
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Not at all. Everything is explained simply. You’ll just start saving time — no tech skills needed.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+          What’s an “automated workflow”?
+        </button>
+      </h2>
+      <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          It’s a manual task — like replying to emails or creating reports — that we automate to run in the background 24/7.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingSix">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+          Can I cancel anytime?
+        </button>
+      </h2>
+      <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+        <div class="accordion-body">
+          Yes. All plans are monthly and cancel-anytime — no contracts or commitments.
+        </div>
+      </div>
+    </div>
+
   </div>
+</div>
+
+
 </section>

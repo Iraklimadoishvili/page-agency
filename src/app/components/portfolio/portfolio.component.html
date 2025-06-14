@@ -1,44 +1,44 @@
 <div class="container py-5">
-  <h2 class="text-center fw-bold mb-2">Demo Projects</h2>
-  <p class="text-center text-muted mb-4">See how we transform websites. These are before & after demos—imagine what we can do for you!</p>
-  <div class="row g-4">
-    <div class="col-12 col-md-6 col-lg-4" *ngFor="let project of projects">
-      <div class="card project-card h-100 shadow-sm">
-        <div class="row g-0 align-items-center">
-          <div class="col-6">
-            <img [src]="project.before" class="img-fluid rounded-start" alt="Before image">
-            <div class="card-caption text-center small mt-2">Before</div>
-          </div>
-          <div class="col-6">
-            <img [src]="project.after" class="img-fluid rounded-end" alt="After image">
-            <div class="card-caption text-center small mt-2">After</div>
-          </div>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title text-center">{{ project.title }}</h5>
-          <p class="card-text small text-center text-muted">{{ project.caption }}</p>
-        </div>
+  <h2 class="text-center fw-bold mb-4">AI Automation Demo Projects</h2>
+  <div class="row g-4 justify-content-center">
+    <!-- Demo 1 -->
+    <div class="col-12 col-md-4">
+      <div class="card h-100 text-center p-4 border-0 shadow-sm">
+        <div class="mb-3" style="font-size:2.5rem;">☕</div>
+        <h5 class="fw-bold mb-2">Café Chatbot Assistant</h5>
+        <div class="text-muted mb-2">We created a chatbot trained on a café’s FAQ — it answers questions like opening hours, location, Wi-Fi availability, and menu items.</div>
+        <div class="small text-secondary mb-2">Tools: Chatbase + Google Sheets</div>
+        <div class="fw-semibold text-success mb-2">Result: The café now replies to 80% of customer messages automatically.</div>
+      </div>
+    </div>
+    <!-- Demo 2 -->
+    <div class="col-12 col-md-4">
+      <div class="card h-100 text-center p-4 border-0 shadow-sm">
+        <div class="mb-3" style="font-size:2.5rem;">🏋️‍♂️</div>
+        <h5 class="fw-bold mb-2">Instagram Content Generator for Fitness Coach</h5>
+        <div class="text-muted mb-2">Set up an AI system that generates 3 weekly workout tips and motivational posts using ChatGPT + Google Sheets, then auto-posts them.</div>
+        <div class="small text-secondary mb-2">Tools: ChatGPT API + Zapier + Buffer</div>
+        <div class="fw-semibold text-success mb-2">Result: Client saved 5 hours/week and tripled posting consistency.</div>
+      </div>
+    </div>
+    <!-- Demo 3 -->
+    <div class="col-12 col-md-4">
+      <div class="card h-100 text-center p-4 border-0 shadow-sm">
+        <div class="mb-3" style="font-size:2.5rem;">🛒</div>
+        <h5 class="fw-bold mb-2">Review Summary Report for Local Store</h5>
+        <div class="text-muted mb-2">Automated a weekly report that pulls new Google Reviews, summarizes them with GPT, and emails a digest to the store owner.</div>
+        <div class="small text-secondary mb-2">Tools: Zapier + ChatGPT + Gmail</div>
+        <div class="fw-semibold text-success mb-2">Result: Owner now sees customer sentiment without reading every review.</div>
       </div>
     </div>
   </div>
-  <div class="text-center mt-5">
-    <a routerLink="/contact" class="btn btn-primary btn-lg">Want something like this? Request a Free Audit</a>
-  </div>
-  <h2 class="text-center fw-bold mb-2">Demo Redesign – Local Café Site</h2>
-  <p class="text-center text-muted mb-4">Cleaned up layout, improved mobile view, added clear CTAs.</p>
-  <div class="row g-4 justify-content-center">
-    <div class="col-12 col-md-8">
-      <div class="card project-card h-100 shadow-sm">
-        <div class="row g-0 align-items-center">
-          <div class="col-12 col-md-6">
-            <img src="assets/cafe-before.jpg" class="img-fluid rounded-start" alt="Before: Café site">
-            <div class="card-caption text-center small mt-2">Before</div>
-          </div>
-          <div class="col-12 col-md-6">
-            <img src="assets/cafe-after.jpg" class="img-fluid rounded-end" alt="After: Café site">
-            <div class="card-caption text-center small mt-2">After</div>
-          </div>
-        </div>
+  <!-- CTA Section -->
+  <div class="row mt-5">
+    <div class="col-12 text-center">
+      <div class="cta-section bg-dark text-white rounded-4 py-4 px-3">
+        <h3 class="fw-bold mb-2">Imagine this in your business…</h3>
+        <p class="mb-3">Let us show you what’s possible — get a free AI automation idea customized to your business.</p>
+        <a routerLink="/contact" class="btn btn-primary btn-lg">Request Free Audit</a>
       </div>
     </div>
   </div>

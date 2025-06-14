@@ -29,25 +29,70 @@
 
 <section class="services-section py-5">
   <div class="container">
-    <h2 class="text-center fw-bold mb-4">How We Help</h2>
-    <div class="row g-4">
-      <div class="col-12 col-md-6" *ngFor="let service of services">
-        <div class="card service-card h-100 shadow-sm text-center p-4">
-          <div class="mb-3">
-            <i [class]="service.icon + ' service-icon'" aria-hidden="true"></i>
+    <h2 class="text-center fw-bold mb-4">Our AI-Powered Services</h2>
+    <div class="row g-4 justify-content-center">
+      <!-- Service 1 -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 text-center p-4 border-0 shadow-sm">
+          <div class="mb-3" style="font-size:2.5rem;">🧠</div>
+          <h5 class="fw-bold mb-2">AI-Powered Customer Support</h5>
+          <div class="text-muted mb-3" style="min-height: 120px;">
+            We create a chatbot that talks to your customers automatically — day or night.<br><br>
+            <strong>You’ll get:</strong>
+            <ul class="text-start small mb-2">
+              <li>A chatbot trained on your own business info (FAQ, open hours, menu, etc.)</li>
+              <li>Works on your website or Facebook Messenger</li>
+              <li>Replies instantly to common questions like “Are you open today?” or “How much does it cost?”</li>
+              <li>You get fewer DMs and emails to answer</li>
+            </ul>
+            <span class="small text-secondary">Built using Chatbase, Tidio, or WhatsApp bots — no code needed.</span>
           </div>
-          <h5 class="card-title fw-bold mb-2">{{ service.name }}</h5>
-          <p class="card-text mb-3">{{ service.description }}</p>
         </div>
       </div>
+      <!-- Service 2 -->
       <div class="col-12 col-md-4">
-        <div class="card h-100 p-4 text-center border-0 shadow-sm bg-light">
-          <div class="mb-3">
-            <i class="bi bi-question-circle display-5 text-primary mb-2"></i>
+        <div class="card h-100 text-center p-4 border-0 shadow-sm">
+          <div class="mb-3" style="font-size:2.5rem;">📝</div>
+          <h5 class="fw-bold mb-2">AI-Generated Social & Product Content</h5>
+          <div class="text-muted mb-3" style="min-height: 120px;">
+            Never worry about what to post again. We’ll build a simple system that:<br><br>
+            <strong>You’ll get:</strong>
+            <ul class="text-start small mb-2">
+              <li>3–5 weekly Instagram/Facebook posts</li>
+              <li>Product descriptions or sales blurbs for your store</li>
+              <li>Auto-scheduling using your calendar or platform</li>
+              <li>Optional weekly approval email before posting</li>
+            </ul>
+            <span class="small text-secondary">Uses ChatGPT, Zapier, and Google Docs — fully managed for you.</span>
           </div>
-          <h5 class="fw-bold mb-2">Not sure what you need?</h5>
-          <p class="text-muted">No pressure! We’ll review your site and tell you exactly what’s holding it back.</p>
-          <a routerLink="/contact" class="btn btn-primary btn-lg mt-2">Request Free Audit</a>
+        </div>
+      </div>
+      <!-- Service 3 -->
+      <div class="col-12 col-md-4">
+        <div class="card h-100 text-center p-4 border-0 shadow-sm">
+          <div class="mb-3" style="font-size:2.5rem;">⚙️</div>
+          <h5 class="fw-bold mb-2">Workflow Automation & Task Elimination</h5>
+          <div class="text-muted mb-3" style="min-height: 120px;">
+            Stop doing boring repetitive tasks — let AI handle them.<br><br>
+            <strong>You’ll get:</strong>
+            <ul class="text-start small mb-2">
+              <li>Automated email replies to customer inquiries</li>
+              <li>Auto-generated weekly Google Sheets sales reports</li>
+              <li>New form submissions go straight into your CRM or inbox</li>
+              <li>Invoice reminders or booking confirmation automations</li>
+            </ul>
+            <span class="small text-secondary">We use tools like Zapier, Make.com, Gmail, Google Sheets, and ChatGPT — you won’t need to touch a thing.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CTA Section -->
+    <div class="row mt-5">
+      <div class="col-12 text-center">
+        <div class="cta-section bg-dark text-white rounded-4 py-4 px-3">
+          <h3 class="fw-bold mb-2">Not sure what you need?</h3>
+          <p class="mb-3">Let us audit your business for free and tell you exactly what can be automated.</p>
+          <a routerLink="/contact" class="btn btn-primary btn-lg">Request Free AI Audit</a>
         </div>
       </div>
     </div>

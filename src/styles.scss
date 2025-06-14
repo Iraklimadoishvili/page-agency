@@ -40,6 +40,7 @@ body {
   font-size: 1.08rem;
   line-height: 1.7;
   letter-spacing: 0.01em;
+  overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -65,4 +66,16 @@ a, .btn {
 // Smoother section spacing
 div.container, section {
   margin-bottom: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .cta-section,
+  .main-content {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+footer {
+  margin-top: 0;
 }
