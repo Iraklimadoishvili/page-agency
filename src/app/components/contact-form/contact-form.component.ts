@@ -18,7 +18,9 @@ export class ContactFormComponent {
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
-      this.selectedPlan = params['plan'] || '';
+      if (params['plan']) {
+        this.selectedPlan = params['plan'];
+      }
     });
   }
 
@@ -31,6 +33,7 @@ export class ContactFormComponent {
       // Optionally open mailto link
       // window.location.href = `mailto:info@youragency.com?subject=Demo Audit Request&body=Name: ${name}%0DBusiness: ${business}%0DEmail: ${email}%0DPhone: ${phone}%0DMessage: ${message}`;
       form.reset();
+      this.selectedPlan = '';
     }
   }
 }

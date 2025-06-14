@@ -1,4 +1,23 @@
 .faq-section .accordion-button {
   font-weight: 600;
 }
-    
+
+.faq-icon {
+  min-width: 1.7em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5em;
+}
+
+@media (max-width: 575.98px) {
+  .faq-section .accordion-button {
+    font-size: 1rem;
+    padding: 0.75rem 1rem;
+  }
+
+  .faq-icon {
+    font-size: 1.1rem;
+    margin-right: 0.3em;
+  }
+}

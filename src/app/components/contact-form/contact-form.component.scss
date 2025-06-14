@@ -1,6 +1,19 @@
-input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched {
+input.ng-invalid.ng-touched, textarea.ng-invalid.ng-touched, select.ng-invalid.ng-touched {
   border-color: #dc3545;
 }
-input.ng-valid.ng-touched, textarea.ng-valid.ng-touched {
+input.ng-valid.ng-touched, textarea.ng-valid.ng-touched, select.ng-valid.ng-touched {
   border-color: #198754;
+}
+select.form-select {
+  min-height: 48px;
+  font-size: 1.1rem;
+}
+@media (max-width: 575.98px) {
+  .contact-page .form-label {
+    font-size: 1rem;
+  }
+  .contact-page .form-control, .contact-page .form-select {
+    font-size: 1rem;
+    min-height: 42px;
+  }
 }

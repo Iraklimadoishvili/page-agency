@@ -9,8 +9,21 @@
 .card-caption {
   color: #6c757d;
 }
+img.img-fluid.rounded-3 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  max-width: 100%;
+  height: auto;
+}
+.bg-light.rounded-3.p-2.small.text-start.border.shadow-sm {
+  font-size: 0.97em;
+  margin-top: 0.5rem;
+}
 @media (max-width: 767.98px) {
   .project-card {
     margin-bottom: 1.5rem;
+  }
+  img.img-fluid.rounded-3 {
+    max-height: 80px;
   }
 }

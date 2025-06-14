@@ -4,8 +4,9 @@
     <div class="accordion" id="faqAccordion">
       <div class="accordion-item" *ngFor="let item of faqs; let i = index">
         <h2 class="accordion-header" [id]="'heading' + i">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i" aria-expanded="false" [attr.aria-controls]="'collapse' + i">
-            {{ item.question }}
+          <button class="accordion-button collapsed d-flex align-items-center gap-2" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#collapse' + i" aria-expanded="false" [attr.aria-controls]="'collapse' + i">
+            <span class="faq-icon" aria-hidden="true" style="font-size:1.3rem;">{{ item.icon }}</span>
+            <span>{{ item.question }}</span>
           </button>
         </h2>
         <div [id]="'collapse' + i" class="accordion-collapse collapse" [attr.aria-labelledby]="'heading' + i" data-bs-parent="#faqAccordion">
